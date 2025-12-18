@@ -1,0 +1,5 @@
+.env
+data/chroma_data/
+data/master_background.json
+misc/*
+outputs/*
