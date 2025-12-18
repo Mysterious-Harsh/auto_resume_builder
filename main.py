@@ -183,9 +183,15 @@ if __name__ == "__main__":
 
     # --- DEFINE YOUR TARGET JOB POSTING HERE ---
     # Use a real URL for a full test
-    TARGET_JOB_URL = (
-        "https://ca.indeed.com/viewjob?jk=8e3b1811f907c538&from=shareddesktop_copy"
+    # asking user for input of job url
+    print("Welcome to the Auto Resume Builder!")
+    TARGET_JOB_URL = input(
+        "\n Please enter the target job posting URL and press Enter to continue...: "
     )
+    # validation of url
+    if not TARGET_JOB_URL.startswith("http"):
+        print("Invalid URL. Please enter a valid job posting URL.")
+        sys.exit(1)
     # Displaying LLM Lists for user selection
     LIST_OF_LLM_MODELS = [
         {"llm_provider": "google", "llm_name": ["gemini-2.5-flash"]},
